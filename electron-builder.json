@@ -1,0 +1,15 @@
+{
+    "appId": "com.electron.electron-webpack-playground",
+    "productName": "Electron Webpack Playground",
+    "directories": {
+        "output": "installer"
+    },
+    "win": {
+        "target": "nsis"
+    },
+    "nsis": {
+        "artifactName": "${name}-win-x64-${version}-setup.${ext}",
+        "oneClick": true
+    }
+
+}
