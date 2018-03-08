@@ -4,14 +4,13 @@
     </div>
 </template>
 
-<script>
+<script type="ts">
 
-    import LandingPage from '@/components/LandingPage';
+  import Vue from 'vue';
+  import LandingPage from '@/components/LandingPage';
 
-    export default {
-        components: {
-            LandingPage
-        }
-    }
+  export default Vue.extend({
+      components: { LandingPage }
+  });
 
 </script>

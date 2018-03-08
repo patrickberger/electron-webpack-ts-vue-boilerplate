@@ -2,15 +2,18 @@
     <div class="m-auto">{{ title }}</div>
 </template>
 
-<script>
+<script lang="ts">
 
-    export default {
+    import Vue from 'vue';
+    //import Component from 'vue-class-component';
+
+    export default Vue.extend({
         data () {
             return {
                 title: 'Welcome to the electron-webpack-vue-boilerplate.'
             }
         }
-    }
+    });
 
 </script>
 

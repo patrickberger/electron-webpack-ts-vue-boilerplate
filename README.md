@@ -7,9 +7,11 @@ This is just another [Electron](https://electronjs.org/) boilerplate. I created 
 * [webpack/webpack-sources#28](https://github.com/webpack/webpack-sources/issues/28)
 * [webpack/webpack-sources/pull/27](https://github.com/webpack/webpack-sources/pull/27#issuecomment-341891811)
 
-This specific boilerplate provides 
+This specific boilerplate provides
+
 * Webpack support using [electron-webpack](https://webpack.electron.build/)
-* Vue.js support using [electron-webpack-vue](https://github.com/electron-userland/electron-webpack/tree/master/packages/electron-webpack-vue)  add-on
+* Vue.js support using [vue](https://github.com/vuejs/vue) and [electron-webpack-vue](https://github.com/electron-userland/electron-webpack/tree/master/packages/electron-webpack-vue)  add-on
+* Typescript support using [typescript](https://github.com/Microsoft/TypeScript), [tslint](https://github.com/palantir/tslint), [ts-loader](https://github.com/TypeStrong/ts-loader) and [electron-webpack-ts](https://github.com/electron-userland/electron-webpack/tree/master/packages/electron-webpack-ts) add-on
 * Less support using [less](https://www.npmjs.com/package/less) and  [less-loader](https://www.npmjs.com/package/less-loader)
 
 ## Installation

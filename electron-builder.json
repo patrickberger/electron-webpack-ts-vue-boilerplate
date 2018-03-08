@@ -1,6 +1,6 @@
 {
-    "appId": "com.electron.electron-webpack-playground",
-    "productName": "Electron Webpack Playground",
+    "appId": "org.patrickberger.electron-webpack-vue-boilerplate",
+    "productName": "Electron Webpack Vue Boilerplate",
     "directories": {
         "output": "installer"
     },
