@@ -1,6 +1,6 @@
 {
     "name": "electron-webpack-vue-boilerplate",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "license": "MIT",
     "author": {
         "name": "Patrick Berger",
@@ -24,21 +24,22 @@
     "devDependencies": {
         "css-loader": "^0.28.9",
         "electron": "1.8.3",
-        "electron-builder": "^20.4.0",
+        "electron-builder": "^20.5.1",
         "electron-webpack": "1.13.0",
         "electron-webpack-ts": "^1.4.0",
         "electron-webpack-vue": "^1.4.0",
         "eslint-plugin-html": "^4.0.2",
-        "less": "^2.7.3",
-        "less-loader": "^4.0.5",
+        "less": "^3.0.1",
+        "less-loader": "^4.1.0",
         "style-loader": "^0.20.1",
         "ts-loader": "3.5.0",
         "tslint": "^5.9.1",
         "typescript": "^2.7.2",
-        "vue": "^2.5.13",
+        "vue": "^2.5.16",
         "webpack": "^3.11.0"
     },
     "resolutions": {
+        "vue-template-compiler": "2.5.16",
         "webpack-sources": "1.0.1"
     }
 }

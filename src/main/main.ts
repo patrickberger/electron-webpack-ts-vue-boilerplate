@@ -1,6 +1,6 @@
-import { app, App, BrowserWindow } from 'electron';
+import { App, BrowserWindow } from 'electron';
 import * as path from 'path';
-import { format as formatUrl } from 'url';
+import * as url from 'url';
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
@@ -47,28 +47,19 @@ export default class Main {
 
     const window = new BrowserWindow();
 
+    // Load target url.
+    const target: string = isDevelopment
+      ? `http://localhost:${process.env.ELECTRON_WEBPACK_WDS_PORT}`
+      : url.format({ pathname: path.join(__dirname, 'index.html'), protocol: 'file', slashes: true });
+    window.loadURL(target);
+
+    // Wire up some events.
+    window.on('closed', Main.onClosed);
+    window.webContents.on('devtools-opened', Main.onDevtoolsOpened);
+
     if (isDevelopment) {
       window.webContents.openDevTools();
     }
-
-    if (isDevelopment) {
-      window.loadURL(`http://localhost:${process.env.ELECTRON_WEBPACK_WDS_PORT}`);
-    } else {
-      window.loadURL(formatUrl({
-        pathname: path.join(__dirname, 'index.html'),
-        protocol: 'file',
-        slashes: true,
-      }));
-    }
-
-    window.on('closed', Main.onClosed);
-
-    window.webContents.on('devtools-opened', () => {
-      window.focus();
-      setImmediate(() => {
-        window.focus();
-      });
-    });
 
     return window;
 
@@ -109,6 +100,28 @@ export default class Main {
   }
 
   /**
+   * Handles main window's 'devtools-opened' event. Emitted when DevTools is opened.
+   *
+   * @private
+   * @static
+   * @returns {void}
+   * @memberof Main
+   */
+  private static onDevtoolsOpened(): void {
+
+    // tslint:disable-next-line:no-console
+    console.log('devtools-opened');
+
+    if (!Main.window) { return; }
+
+    Main.window.focus();
+    setImmediate(() => {
+      if (Main.window) { Main.window.focus(); }
+    });
+
+  }
+
+  /**
    * Handles the app's 'ready' event. Emitted when Electron has finished initializing.
    *
    * @private
@@ -138,7 +151,7 @@ export default class Main {
 
     // On macOS it is common for applications to stay open until the user explicitly quits.
     if (process.platform !== 'darwin') {
-      app.quit();
+      Main.application.quit();
     }
 
   }
