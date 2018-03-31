@@ -1,4 +1,4 @@
-# Electron Webpack / Vue.js Boilerplate
+# Electron Webpack / Typescript / Vue.js Boilerplate
 
 ## Introduction
 
@@ -20,7 +20,7 @@ It is highly recommended to use [Yarn](https://yarnpkg.com/) package manager ins
 
 ``` bash
 # Clone the repository ...
-$ git clone https://github.com/patrickberger/electron-webpack-vue-boilerplate
+$ git clone https://github.com/patrickberger/electron-webpack-ts-vue-boilerplate
 
 # ... and install dependencies.
 yarn

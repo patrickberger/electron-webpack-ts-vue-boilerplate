@@ -1,6 +1,6 @@
 {
-    "appId": "org.patrickberger.electron-webpack-vue-boilerplate",
-    "productName": "Electron Webpack Vue Boilerplate",
+    "appId": "org.patrickberger.electron-webpack-ts-vue-boilerplate",
+    "productName": "Electron Webpack / Typescript / Vue.js Boilerplate",
     "directories": {
         "output": "installer"
     },
@@ -8,7 +8,7 @@
         "target": "nsis"
     },
     "nsis": {
-        "artifactName": "${name}-win-x64-${version}-setup.${ext}",
+        "artifactName": "${name}-win-${version}-setup.${ext}",
         "oneClick": true
     }
 
