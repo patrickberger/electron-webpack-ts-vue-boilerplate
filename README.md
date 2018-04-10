@@ -1,5 +1,7 @@
 # Electron Webpack / Typescript / Vue.js Boilerplate
 
+[![dependencies Status](https://david-dm.org/patrickberger/electron-webpack-ts-vue-boilerplate/status.png)](https://david-dm.org/patrickberger/electron-webpack-ts-vue-boilerplate) [![devDependencies Status](https://david-dm.org/patrickberger/electron-webpack-ts-vue-boilerplate/dev-status.png)](https://david-dm.org/patrickberger/electron-webpack-ts-vue-boilerplate?type=dev) [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.png?v=103)](https://opensource.org/licenses/mit-license.php)
+
 ## Introduction
 
 This is just another [Electron](https://electronjs.org/) boilerplate. I created this because anything I found over the internet failed to compile using current version of [webpack](https://webpack.js.org/) due to a bug.
